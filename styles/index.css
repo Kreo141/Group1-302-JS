@@ -16,14 +16,14 @@ a, p, h1{
 
 #nav {
     background-color: #FFFFFF;
-    width: 2%;     /* Adjust width to fit the content */
-    height: fit-content;    /* Adjust height to fit the content */
+    width: 2%;   
+    height: fit-content;   
     margin-left: 2%;
     margin-right: 2%;
     display: flex;
-    flex-direction: column; /* Arrange children vertically */
-    align-items: center;    /* Center children horizontally within the column */
-    justify-content: center; /* Center children vertically (optional) */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
     padding: 0.8%;
     padding-top: 2%;
     padding-bottom: 2%;
