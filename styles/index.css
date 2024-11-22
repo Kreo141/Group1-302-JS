@@ -4,12 +4,12 @@ body{
     overflow-x: hidden;
     --_mesh-gradient-blur: 0px;
     --_mesh-gradient-blend-mode: normal;
-    
     background: radial-gradient(at 14% 81%, #f07237 0px, transparent 50%), radial-gradient(at 15% 31%, #f0ce37 0px, transparent 50%), radial-gradient(at 92% 72%, #b5f037 0px, transparent 50%), radial-gradient(at 17% 21%, #37b5f0 0px, transparent 50%), radial-gradient(at 96% 2%, #7237f0 0px, transparent 50%) #000000;
     mix-blend-mode: var(--_mesh-gradient-blend-mode);
     filter: blur(var(--_mesh-gradient-blur));
-    
 }
+
+@keyframes hero-gradient-animation{0%{--s-start-0:2%; --s-end-0:78.72573401919361%; --x-0:98%; --c-0:hsla(55.58823529411776,0%,100%,0.86); --y-0:98%;}100%{--s-start-0:2%; --s-end-0:78.72573401919361%; --x-0:2%; --c-0:hsla(284.55882352941165,0%,100%,0.86); --y-0:98%;}}@property --s-start-0{syntax:'<percentage>';inherits:false;initial-value:2%}@property --s-end-0{syntax:'<percentage>';inherits:false;initial-value:78.72573401919361%}@property --x-0{syntax:'<percentage>';inherits:false;initial-value:98%}@property --c-0{syntax:'<color>';inherits:false;initial-value:hsla(55.58823529411776,0%,100%,0.86)}@property --y-0{syntax:'<percentage>';inherits:false;initial-value:98%}@property --x-1{syntax:'<percentage>';inherits:false;initial-value:98%}@property --s-start-1{syntax:'<percentage>';inherits:false;initial-value:2%}@property --s-end-1{syntax:'<percentage>';inherits:false;initial-value:78.72573401919361%}@property --y-1{syntax:'<percentage>';inherits:false;initial-value:91%}@property --c-1{syntax:'<color>';inherits:false;initial-value:hsla(284.55882352941177,85%,73%,0.42)}@property --s-start-2{syntax:'<percentage>';inherits:false;initial-value:2%}@property --s-end-2{syntax:'<percentage>';inherits:false;initial-value:61.288600779667334%}@property --x-2{syntax:'<percentage>';inherits:false;initial-value:16%}@property --y-2{syntax:'<percentage>';inherits:false;initial-value:87%}@property --c-2{syntax:'<color>';inherits:false;initial-value:hsla(181.00000000000003,85%,73%,0.42)}@property --y-3{syntax:'<percentage>';inherits:false;initial-value:79%}@property --c-3{syntax:'<color>';inherits:false;initial-value:hsla(252.7941176470588,85%,73%,0.42)}@property --x-3{syntax:'<percentage>';inherits:false;initial-value:52%}@property --s-start-3{syntax:'<percentage>';inherits:false;initial-value:2%}@property --s-end-3{syntax:'<percentage>';inherits:false;initial-value:61.288600779667334%}body{--x-0:98%;--c-0:hsla(55.58823529411776,0%,100%,0.86);--y-0:98%;--x-1:98%;--y-1:91%;--c-1:hsla(284.55882352941177,85%,73%,0.42);--x-2:16%;--y-2:87%;--c-2:hsla(181.00000000000003,85%,73%,0.42);--y-3:79%;--c-3:hsla(252.7941176470588,85%,73%,0.42);--x-3:52%;;background-color:hsla(198.00000000000063,14%,16%,1);background-image:radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0),transparent var(--s-end-0)),radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1),transparent var(--s-end-1)),radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2),transparent var(--s-end-2)),radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3),transparent var(--s-end-3));animation:hero-gradient-animation 10s linear infinite alternate;background-blend-mode:overlay,normal,normal,normal;}
 
 a, p, h1{
     color: white;
@@ -32,11 +32,11 @@ a, p, h1{
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
-    padding: 1%;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding: 2vh;
+    padding-top: 1%;
+    padding-bottom: 1%;
     border-radius: 1vh;
-    gap: 7vh;
+    gap: 2vh;
 }
 
 .navButton {
@@ -56,7 +56,7 @@ a, p, h1{
 }
 
 #navIcon{
-    font-size: 3.8vh;
+    font-size: 2.8vh;
 }
 
 
@@ -69,10 +69,9 @@ a, p, h1{
     flex-wrap: wrap; 
     gap: 10%;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: center; 
     padding: 1rem;
-    background-color: #242323;
-    border-radius: 1vh;
+    border-radius: 3vh 0 0 3vh;
 }
 
 .Container {
@@ -88,7 +87,7 @@ a, p, h1{
 }
 
 #imageContainer{
-    background-color: #575757;
+    background-color: #cfcfcf7a;
     width: 13vw;
     height: 13vw;
     display: flex;
@@ -97,7 +96,7 @@ a, p, h1{
 }
 img{
     overflow: hidden;
-    height: 100%;
+    height: 100vh;
 }
 
 #title{
@@ -109,6 +108,7 @@ img{
     height: 100%;
 }
 
-#title p{
-    color: black;
+#imageContainer p{
+    color: rgb(46, 46, 46);
+    font-size: 1.2vw;
 }
