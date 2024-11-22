@@ -4,63 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
+
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!--ICONS-->
+    <link rel="stylesheet" href="Resources/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div id="nav">
-        <div id="homeBtn">
-            <p>Home</p>
+    <div id="everything">
+
+        <div id="nav">
+            <div id="homeBtn" class="navButton">
+                <div id="navIcon" class="fa fa-home" aria-hidden="true"></div>
+            </div>
+            <div id="customizeBtn" class="navButton">
+                <div id="navIcon" class="fa fa-pencil" aria-hidden="true"></div>
+            </div>
+            <div id="settingsBtn" class="navButton">
+                <div id="navIcon" class="fa fa-sliders" aria-hidden="true"></div>
+            </div>
         </div>
-        <div id="customizeBtn">
-            <p>Customize</p>
+
+        <div id="categoryContainer">
+
+            <div id="container1" class="Container">
+
+                <div id="imageContainer">
+                    <img>
+                </div>
+
+                <div id="title">
+                    <p>Science</p>
+                </div>
+
+            </div>
+
+
+            <div id="container2" class="Container">
+
+                <div id="imageContainer">
+                    <img>
+                </div>
+
+                <div id="title">
+                    <p>History</p>
+                </div>
+
+            </div>
+
+
+            <div id="container3" class="Container">
+
+                <div id="imageContainer">
+                    <img>
+                </div>
+
+                <div id="title">
+                    <p>Math</p>
+                </div>
+                
+            </div>
+
         </div>
-        <div id="settingsBtn">
-            <p>Settings</p>
-        </div>
+
     </div>
-
-    <div id="categoryContainer">
-
-        <div id="container1" class="Container">
-
-            <div id="imageContainer">
-                <img>
-            </div>
-
-            <div id="title">
-                <p>Science</p>
-            </div>
-
-        </div>
-
-
-        <div id="container2" class="Container">
-
-            <div id="imageContainer">
-                <img>
-            </div>
-
-            <div id="title">
-                <p>History</p>
-            </div>
-
-        </div>
-
-
-        <div id="container3" class="Container">
-
-            <div id="imageContainer">
-                <img>
-            </div>
-
-            <div id="title">
-                <p>Math</p>
-            </div>
-            
-        </div>
-
-    </div>
-
-
-
 </body>
 </html>
