@@ -2,10 +2,18 @@ body{
     margin: 0;
     background-color: #1A1A1A;
     overflow-x: hidden;
+    --_mesh-gradient-blur: 0px;
+    --_mesh-gradient-blend-mode: normal;
+    
+    background: radial-gradient(at 14% 81%, #f07237 0px, transparent 50%), radial-gradient(at 15% 31%, #f0ce37 0px, transparent 50%), radial-gradient(at 92% 72%, #b5f037 0px, transparent 50%), radial-gradient(at 17% 21%, #37b5f0 0px, transparent 50%), radial-gradient(at 96% 2%, #7237f0 0px, transparent 50%) #000000;
+    mix-blend-mode: var(--_mesh-gradient-blend-mode);
+    filter: blur(var(--_mesh-gradient-blur));
+    
 }
 
 a, p, h1{
     color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #everything{
@@ -24,19 +32,20 @@ a, p, h1{
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
-    padding: 0.8%;
+    padding: 1%;
     padding-top: 2%;
     padding-bottom: 2%;
     border-radius: 1vh;
-    gap: 5vh;
+    gap: 7vh;
 }
 
 .navButton {
+    border: 0;
     border-radius: 10%;
     background-color: #FFFFFF;
-    box-shadow: 1px 1px 4px;
-    height: 5vh;
-    width: 5vh;
+    box-shadow: 1px 1px 8px -2px;
+    height: 6vh;
+    width: 6vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,12 +56,59 @@ a, p, h1{
 }
 
 #navIcon{
-    font-size: 4vh;
+    font-size: 3.8vh;
 }
 
 
-#categoryContainer{
-    width: 100%;
+/* Category Cards */
+
+#categoryContainer {
+    width: 100%; 
     height: 90%;
-    border: 1px white solid;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10%;
+    justify-content: center;
+    align-items: flex-start; 
+    padding: 1rem;
+    background-color: #242323;
+    border-radius: 1vh;
+}
+
+.Container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vh;
+    overflow: hidden;
+    border-radius: 1vh;
+}
+
+#imageContainer{
+    background-color: #575757;
+    width: 13vw;
+    height: 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+img{
+    overflow: hidden;
+    height: 100%;
+}
+
+#title{
+    background-color: rgb(0, 143, 143);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#title p{
+    color: black;
 }
