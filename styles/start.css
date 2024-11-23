@@ -1,0 +1,72 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.socialstudies.com/wp-content/uploads/2022-06-24-17_57_58-The-Disappearing-Social-Studies-Curriculum-and-Tips-to-Integrate-Content-into-O.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    animation: slideBackground 10s linear infinite;
+    filter: blur(10px);
+}
+
+
+
+@keyframes slideBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+}
+
+#content {
+    margin-bottom: 10%;
+}
+
+#blacklLiger {
+    position: absolute;
+    height: 46vh;
+    width: 80vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+font-size: 5vh;
+}
+
+img {
+height: 28vh;
+}
+
+p{
+font-size: 2vh;
+}
