@@ -3,93 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-
-    <!--ICONS-->
-    <link rel="stylesheet" href="Resources/font-awesome-4.7.0/css/font-awesome.min.css">
-
-    <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!--STYLES-->
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/index-background.css">
-
-    <!--SCRIPTS-->
-    <script src="scripts/index-hoverEffects.js"></script>
-
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/start.css">
 </head>
 <body>
+    <div class="background"></div>
 
-                            <div>
-                                <div class="wave"></div>
-                                <div class="wave"></div>
-                                <div class="wave"></div>
-                            </div>
-
-    <div id="everything">
-        
-        <div id="nav">
-            <button id="homeBtn" class="navButton">
-                <div id="navIcon" class="fa fa-home" aria-hidden="true"></div>
-            </button>
-            <button id="customizeBtn" class="navButton">
-                <div id="navIcon" class="fa fa-pencil" aria-hidden="true"></div>
-            </button>
-            <button id="settingsBtn" class="navButton">
-                <div id="navIcon" class="fa fa-sliders" aria-hidden="true"></div>
-            </button>
-        </div>
-
-        <div id="categoryContainer">
-
-            <div id="container1" class="Container" onmouseenter="expand()">
-                <div id="imageContainer">
-                    <img src="https://img.freepik.com/free-vector/hand-drawn-science-education-background_23-2148499325.jpg"></img>
-                </div>
-            </div>
-
-            <div id="container2" class="Container">
-                <div id="imageContainer">
-                    <img src="https://blog.udemy.com/wp-content/uploads/2014/05/bigstock-History-56161577.jpg">
-                </div>
-            </div>
-
-            <div id="container3" class="Container">
-                <div id="imageContainer">
-                    <img src="https://th.bing.com/th/id/OIP.g9UHblwHf4VFKhoT4c2UYAHaHa?rs=1&pid=ImgDetMain">
-                </div>
-            </div>
-
-            <div id="container4" class="Container">
-                <div id="imageContainer">
-                    <img src="https://educationadvizer.com/wp-content/uploads/2023/05/learn-english-768x593.jpg">
-                </div>
-            </div>
-
-            <div id="container5" class="Container">
-                <div id="imageContainer">
-                    <img src="https://image.shutterstock.com/image-vector/information-technology-word-cloud-tag-600w-501677983.jpg">
-                </div>
-            </div>
-
-            <div id="container6" class="Container">
-                <div id="imageContainer">
-                    <img src="https://th.bing.com/th/id/OIP.mH31yrEzqgC2vDctscxNuQHaHa?rs=1&pid=ImgDetMain">
-                </div>
-            </div>
-
-        </div>
-
+    <div class="content">
+      <div id="blacklLiger"></div>
+      <div id="content">
+        <img src="https://medjournal360.com/wp-content/uploads/2023/05/AdobeStock_220561178-scaled-e1683894718559.jpeg">
+        <h1>Quiz App (By Group 1)</h1>
+        <p>MAWD302</p>
+      </div>
     </div>
-
-
-    <!--BACKGROUND MUSIC-->
-    <audio id="bg-music" autoplay loop>
-        <source src="Resources/audio/AdhesiveWombat - Night Shade.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio> 
-    <script src="scripts/backgroundMusic.js"></script>
-    
+  
+    <script>
+      setTimeout(function() {
+        window.location.href = "index.html";
+      }, 4000);
+    </script>
 </body>
 </html>

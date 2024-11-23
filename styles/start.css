@@ -19,8 +19,6 @@ body, html {
     filter: blur(10px);
 }
 
-
-
 @keyframes slideBackground {
     from {
         background-position: 0 0;
