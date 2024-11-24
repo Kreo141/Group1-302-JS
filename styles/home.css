@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    overflow: auto;
+
+}
+
+
+a, p, h1{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+#everything{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+#nav {
+    background-color: #ffffff;
+    width: 2%;   
+    height: fit-content;   
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    padding: 2vh;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 1vh;
+    gap: 2vh;
+}
+
+.navButton {
+    border: 0;
+    border-radius: 10%;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 8px -2px;
+    height: 6vh;
+    width: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ease 0.5s;
+    transition: box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+#navIcon{
+    font-size: 2.8vh;
+}
+
+
+/* Category Cards */
+
+#categoryContainer {
+    width: 100%; 
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10%;
+    justify-content: center;
+    align-items: center; 
+    padding: 1rem;
+    border-radius: 3vh 0 0 3vh;
+}
+
+.Container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 4px 4px ;
+    display: none;
+    transition: left 0.3 ease;
+}
+
+
+#imageContainer{
+    background-color: #cfcfcf7a;
+    width: 13vw;
+    height: 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    transition: all 0.3s ease; 
+}
+
+img{
+    overflow: hidden;
+    height: 100%;
+    object-fit: cover;
+}
+
+#title{
+    background-color: rgb(0, 143, 143);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#imageContainer p{
+    color: rgb(46, 46, 46);
+    font-size: 1.2vw;
+}
+
+

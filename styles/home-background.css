@@ -5,6 +5,14 @@ body{
     background-attachment: fixed;
 }
 
+#HEHE{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
 /*WAVE WAVE*/
 
 @keyframes gradient {

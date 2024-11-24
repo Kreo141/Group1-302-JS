@@ -10,4 +10,4 @@ const enableAutoplay = () => {
   document.removeEventListener('click', enableAutoplay);
 };
 
-document.addEventListener('click', enableAutoplay);
+document.addEventListener('onclick', enableAutoplay);

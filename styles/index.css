@@ -1,112 +1,68 @@
-body{
+body, html {
     margin: 0;
-    overflow: auto;
-
-}
-
-
-a, p, h1{
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-
-
-#everything{
-    display: flex;
-    align-items: center;
-    height: 100vh;
-}
-
-#nav {
-    background-color: #FFFFFF;
-    width: 2%;   
-    height: fit-content;   
-    margin-left: 2%;
-    margin-right: 2%;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center;
-    padding: 2vh;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-radius: 1vh;
-    gap: 2vh;
-}
-
-.navButton {
-    border: 0;
-    border-radius: 10%;
-    background-color: #FFFFFF;
-    box-shadow: 1px 1px 8px -2px;
-    height: 6vh;
-    width: 6vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#homeBtn{
-    background-color: #00FF37 ;
-}
-
-#navIcon{
-    font-size: 2.8vh;
-}
-
-
-/* Category Cards */
-
-#categoryContainer {
-    width: 100%; 
-    height: 90%;
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 10%;
-    justify-content: center;
-    align-items: center; 
-    padding: 1rem;
-    border-radius: 3vh 0 0 3vh;
-}
-
-.Container {
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 4px 4px ;
-}
-
-#imageContainer{
-    background-color: #cfcfcf7a;
-    width: 13vw;
-    height: 13vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-}
-
-img{
-    overflow: hidden;
+    padding: 0;
     height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-#title{
-    background-color: rgb(0, 143, 143);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  
+.background {
+    position: fixed;
     width: 100%;
     height: 100%;
+    background-image: url('https://www.socialstudies.com/wp-content/uploads/2022-06-24-17_57_58-The-Disappearing-Social-Studies-Curriculum-and-Tips-to-Integrate-Content-into-O.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    animation: slideBackground 10s linear infinite;
+    filter: blur(13px);
 }
 
-#imageContainer p{
-    color: rgb(46, 46, 46);
-    font-size: 1.2vw;
+@keyframes slideBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
 }
 
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+}
 
+#content {
+    margin-bottom: 10%;
+}
+
+#blacklLiger {
+    position: absolute;
+    height: 46vh;
+    width: 80vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 5vh;
+}
+
+img {
+    height: 30vh;
+}
+
+p{
+    font-size: 2vh;
+}

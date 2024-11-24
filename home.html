@@ -12,14 +12,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!--STYLES-->
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/index-background.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/home-background.css">
 
     <!--SCRIPTS-->
-    <script src="scripts/index-hoverEffects.js"></script>
+
 
 </head>
-<body>
+<body id="HEHE">
 
                             <div>
                                 <div class="wave"></div>
@@ -30,52 +30,52 @@
     <div id="everything">
         
         <div id="nav">
-            <button id="homeBtn" class="navButton">
+            <button id="homeBtn" class="navButton" onmouseenter="glow(this)" onmouseleave="reset(this)">
                 <div id="navIcon" class="fa fa-home" aria-hidden="true"></div>
             </button>
-            <button id="customizeBtn" class="navButton">
+            <button id="customizeBtn" class="navButton" onmouseenter="glow(this)" onmouseleave="reset(this)">
                 <div id="navIcon" class="fa fa-pencil" aria-hidden="true"></div>
             </button>
-            <button id="settingsBtn" class="navButton">
+            <button id="settingsBtn" class="navButton" onmouseenter="glow(this)" onmouseleave="reset(this)">
                 <div id="navIcon" class="fa fa-sliders" aria-hidden="true"></div>
             </button>
         </div>
 
         <div id="categoryContainer">
 
-            <div id="container1" class="Container" onmouseenter="expand()">
+            <div id="container1" class="Container">
                 <div id="imageContainer">
-                    <img src="https://img.freepik.com/free-vector/hand-drawn-science-education-background_23-2148499325.jpg"></img>
+                    <img src="https://img.freepik.com/free-vector/hand-drawn-science-education-background_23-2148499325.jpg"  onmouseenter="expand(this)" onmouseleave="shorten(this)"></img>
                 </div>
             </div>
 
             <div id="container2" class="Container">
                 <div id="imageContainer">
-                    <img src="https://blog.udemy.com/wp-content/uploads/2014/05/bigstock-History-56161577.jpg">
+                    <img src="https://blog.udemy.com/wp-content/uploads/2014/05/bigstock-History-56161577.jpg"  onmouseenter="expand(this)" onmouseleave="shorten(this)">
                 </div>
             </div>
 
             <div id="container3" class="Container">
                 <div id="imageContainer">
-                    <img src="https://th.bing.com/th/id/OIP.g9UHblwHf4VFKhoT4c2UYAHaHa?rs=1&pid=ImgDetMain">
+                    <img src="https://th.bing.com/th/id/OIP.g9UHblwHf4VFKhoT4c2UYAHaHa?rs=1&pid=ImgDetMain"  onmouseenter="expand(this)" onmouseleave="shorten(this)">
                 </div>
             </div>
 
             <div id="container4" class="Container">
                 <div id="imageContainer">
-                    <img src="https://educationadvizer.com/wp-content/uploads/2023/05/learn-english-768x593.jpg">
+                    <img src="https://educationadvizer.com/wp-content/uploads/2023/05/learn-english-768x593.jpg"  onmouseenter="expand(this)" onmouseleave="shorten(this)">
                 </div>
             </div>
 
             <div id="container5" class="Container">
                 <div id="imageContainer">
-                    <img src="https://image.shutterstock.com/image-vector/information-technology-word-cloud-tag-600w-501677983.jpg">
+                    <img src="https://image.shutterstock.com/image-vector/information-technology-word-cloud-tag-600w-501677983.jpg"  onmouseenter="expand(this)" onmouseleave="shorten(this)">
                 </div>
             </div>
 
             <div id="container6" class="Container">
                 <div id="imageContainer">
-                    <img src="https://th.bing.com/th/id/OIP.mH31yrEzqgC2vDctscxNuQHaHa?rs=1&pid=ImgDetMain">
+                    <img src="https://th.bing.com/th/id/OIP.mH31yrEzqgC2vDctscxNuQHaHa?rs=1&pid=ImgDetMain"  onmouseenter="expand(this)" onmouseleave="shorten(this)">
                 </div>
             </div>
 
@@ -89,7 +89,10 @@
         <source src="Resources/audio/AdhesiveWombat - Night Shade.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio> 
-    <script src="scripts/backgroundMusic.js"></script>
-    
+
 </body>
+<script src="scripts/startUp.js"></script>
+<script src="scripts/backgroundMusic.js"></script>
+<script src="scripts/index-hoverEffects.js"></script>
+<script src="scripts/navigationFunc.js"></script>
 </html>
