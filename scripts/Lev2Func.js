@@ -10,3 +10,9 @@ function open(elementId){
         "bottom", "0%"
     )
 }
+
+function close(){
+    $("#Lev2Container").css(
+        "bottom", "-100%"
+    )
+}
