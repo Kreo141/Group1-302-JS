@@ -4,3 +4,8 @@ $(document).ready(function () {
     });
 });
 
+function open(id){
+    $("#Lev2Container").css(
+        "bottom", "0%"
+    )
+}
