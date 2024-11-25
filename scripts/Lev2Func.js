@@ -1,10 +1,11 @@
 $(document).ready(function () {
     $('.Container').on('click', function () {
-        var containerId = $(this).attr('id');
+        var elementId = $(this).attr('id');
+        open(elementId)
     });
 });
 
-function open(id){
+function open(elementId){
     $("#Lev2Container").css(
         "bottom", "0%"
     )
