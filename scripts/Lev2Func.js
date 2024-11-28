@@ -24,7 +24,18 @@ function open(elementId){
             subjectName: "Math",
             imgLink: ""
         },
-
+        container4: {
+            subjectName: "English",
+            imgLink: ""
+        },
+        container5: {
+            subjectName: "IT",
+            imgLink: ""
+        },
+        container6: {
+            subjectName: "Music",
+            imgLink: ""
+        },
     }
 
     $("#Lev2Container").css(
