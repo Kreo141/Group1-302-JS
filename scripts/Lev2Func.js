@@ -16,6 +16,14 @@ function open(elementId){
             subjectName: "Science",
             imgLink: ""
         },
+        container2: {
+            subjectName: "History",
+            imgLink: ""
+        },
+        container3: {
+            subjectName: "Math",
+            imgLink: ""
+        },
 
     }
 
