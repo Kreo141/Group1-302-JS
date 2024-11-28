@@ -10,6 +10,15 @@ $(document).ready(function () {
 });
 
 function open(elementId){
+
+    var subjectContext = {
+        container1: {
+            subjectName: "Science",
+            imgLink: ""
+        },
+
+    }
+
     $("#Lev2Container").css(
         "bottom", "0%"
     )
