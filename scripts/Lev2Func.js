@@ -34,14 +34,15 @@ function open(elementId){
         },
         container6: {
             subjectName: "Music",
-            imgLink: ""
+            imgLink: "https://th.bing.com/th/id/OIP.mH31yrEzqgC2vDctscxNuQHaHa?rs=1&pid=ImgDetMain"
         },
     }
 
     var title = subjectContext[elementId].subjectName
+    var imgSrc = subjectContext[elementId].imgLink
 
     $("#subjectTitle").text(title)
-
+    $("#subjectImg").attr("src", "new-image-link.jpg");
     $("#Lev2Container").css(
         "bottom", "0%"
     )
