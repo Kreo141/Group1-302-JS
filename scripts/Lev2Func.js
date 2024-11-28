@@ -1,8 +1,12 @@
 $(document).ready(function () {
-    $('.Container').on('click', function () {
+    $(".Container").on("click", function () {
         var elementId = $(this).attr('id');
         open(elementId)
     });
+
+    $("#closeLev2").on("click", function(){
+        close()
+    })
 });
 
 function open(elementId){

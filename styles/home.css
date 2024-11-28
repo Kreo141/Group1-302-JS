@@ -118,7 +118,7 @@ img{
     position: absolute;
     height: 100vh;
     width: 100vw;
-    bottom: 0;
+    bottom: -100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,4 +192,29 @@ img{
     font-weight: 900;
     color: white;
     background-color: green;
+}
+
+#exit{
+    position: absolute;
+    left: 65%;
+}
+
+#closeLev2 {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    background-color: white;
+    border: none;
+    color: rgb(255, 0, 0);
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    transition: background-color 0.3s ease;
+    border-radius: 3px;
+}
+
+#closeLev2:hover {
+    background-color: red;
+    color: white;
 }
