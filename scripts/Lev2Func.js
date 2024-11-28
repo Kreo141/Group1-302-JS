@@ -38,6 +38,8 @@ function open(elementId){
         },
     }
 
+    var title = subjectContext[elementId].subjectName
+
     $("#Lev2Container").css(
         "bottom", "0%"
     )
