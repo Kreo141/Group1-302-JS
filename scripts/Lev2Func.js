@@ -42,7 +42,7 @@ function open(elementId){
     var imgSrc = subjectContext[elementId].imgLink
 
     $("#subjectTitle").text(title)
-    $("#subjectImg").attr("src", "new-image-link.jpg");
+    $("#subjectImg").attr("src", imgSrc);
     $("#Lev2Container").css(
         "bottom", "0%"
     )
