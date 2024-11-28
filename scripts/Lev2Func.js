@@ -40,9 +40,12 @@ function open(elementId){
 
     var title = subjectContext[elementId].subjectName
 
+    $("#subjectTitle").text(title)
+
     $("#Lev2Container").css(
         "bottom", "0%"
     )
+
 }
 
 function close(){
