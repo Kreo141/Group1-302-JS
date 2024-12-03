@@ -31,9 +31,10 @@ $(document).ready(function() {
     });
 
     $('#start').click(function() {
+        var subject = $("#subjectTitle").text()
         var difficulty = $("#difficulty").val()
         var questionCount = $("#questionCount").val()
 
-        window.location.href = `pages/quizPage.html?data1=${encodeURIComponent(data1)}&data2=${encodeURIComponent(data2)}`;
+        window.location.href = `../pages/quizPage.html?data1=${encodeURIComponent(subject)}&data2=${encodeURIComponent(difficulty)}&data3=${encodeURIComponent(questionCount)}`;
     });
 });
