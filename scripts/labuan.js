@@ -31,6 +31,9 @@ $(document).ready(function() {
     });
 
     $('#start').click(function() {
-        alert('Game Started!');
+        var difficulty = $("#difficulty").val()
+        var questionCount = $("#questionCount").val()
+
+        window.location.href = `pages/quizPage.html?data1=${encodeURIComponent(data1)}&data2=${encodeURIComponent(data2)}`;
     });
 });
