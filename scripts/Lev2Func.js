@@ -11,6 +11,12 @@ $(document).ready(function () {
 
 function open(elementId){
 
+    $("#blur").css({
+        "display": "block",
+        "-webkit-backdrop-filter": "blur(10px)",
+        "backdrop-filter": "blur(10px)"
+    });
+
     var subjectContext = {
         container1: {
             subjectName: "Science",
@@ -50,7 +56,15 @@ function open(elementId){
 }
 
 function close(){
+    $("#blur").css({
+        "-webkit-backdrop-filter": "blur(0px)",
+        "backdrop-filter": "blur(0px)",
+        "display": "none"
+    });
+    
     $("#Lev2Container").css(
         "bottom", "-100%"
     )
 }
+
+console.log(html())
