@@ -16,8 +16,14 @@ $(document).ready(function() {
         const difficulty = difficultyLevels[currentDifficultyIndex];
         const color = difficultyColors[currentDifficultyIndex];
 
-        // Update the text and color of the Difficulty button
-        $(this).text(difficulty).css('background-color', color);
+        // Update the text, background color, text color, and value of the Difficulty button
+        $(this)
+            .text(difficulty)
+            .val(difficulty) // Update the value
+            .css({
+                'background-color': color,
+                'color': difficulty === 'Medium' ? 'black' : 'white'
+            });
     });
 
     // Handle clicks on the Questions button
@@ -26,8 +32,10 @@ $(document).ready(function() {
         currentQuestionIndex = (currentQuestionIndex + 1) % questionCounts.length;
         const questions = questionCounts[currentQuestionIndex];
 
-        // Update the text of the Questions button
-        $(this).text(questions + ' QUESTIONS');
+        // Update the text and value of the Questions button
+        $(this)
+            .text(questions + ' QUESTIONS')
+            .val(questions); // Update the value
     });
 
     // Start button remains unaffected and can be used as needed
