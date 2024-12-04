@@ -71,12 +71,15 @@ function renderQuestions(selectedQuestions) {
     document.body.appendChild(form);
 }
 
+let selectedQuestions = [];
+
 if (subjects[selectedSubject]) {
-    const selectedQuestions = generateRandomQuestions(subjects[selectedSubject], questionCount);
+    selectedQuestions = generateRandomQuestions(subjects[selectedSubject], questionCount);
     renderQuestions(selectedQuestions);
 } else {
     alert('Invalid subject selected!');
 }
+
 
 document.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -84,7 +87,6 @@ document.addEventListener('submit', (event) => {
     const formData = new FormData(document.getElementById('quiz-form'));
     const results = [];
 
-    const selectedQuestions = generateRandomQuestions(subjects[selectedSubject], questionCount);
     selectedQuestions.forEach((questionObj, index) => {
         const userAnswer = formData.get(`question-${index}`);
         const correctAnswer = questionObj.answer;
@@ -98,6 +100,7 @@ document.addEventListener('submit', (event) => {
     console.log('Quiz Results:', results);
     alert('Quiz submitted! Check the console for results.');
 });
+
 
     
 })
