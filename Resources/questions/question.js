@@ -1,6 +1,6 @@
 export const subject = {
 
-    science: {
+    Science: {
         questions: {
             question1: {
                 question: "What is the center of our solar system?",
@@ -106,7 +106,7 @@ export const subject = {
 
     },
 
-    history:  {
+    History:  {
 
         questions: {
             question1: {
@@ -118,7 +118,7 @@ export const subject = {
 
     },
 
-    math:  {
+    Math:  {
 
         questions: {
             question1: {
@@ -130,7 +130,7 @@ export const subject = {
 
     },
 
-    english:  {
+    English:  {
 
         questions: {
             question1: {
@@ -154,7 +154,7 @@ export const subject = {
 
     },
 
-    music:  {
+    Music:  {
 
         questions: {
             question1: {
