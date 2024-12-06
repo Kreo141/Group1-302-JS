@@ -234,7 +234,7 @@ export const subject = {
             question4: {
                 question: "Simplify the fraction: 12/18",
                 answer: "2/3",
-                wrong_answers: [ "3/4","4/5"]
+                wrong_answers: ["3/4","4/5"]
             },
             question5: {
                 question: "What is the area of a rectangle with a length of 6 units and a width of 4 units?",
@@ -244,7 +244,7 @@ export const subject = {
             question6: {
                 question: "What is the perimeter of a square with a side length of 5 cm?",
                 answer: "20 cm",
-                wrong_answers: [ "10 cm","15 cm"]
+                wrong_answers: ["10 cm","15 cm"]
             },
             question7: {
                 question: "Solve for x: x^2 - 4 = 0",
@@ -254,7 +254,7 @@ export const subject = {
             question8: {
                 question: "What is the slope of the line y = 2x + 3?",
                 answer: "2",
-                wrong_answers: [ "3 ","-3"]
+                wrong_answers: ["3 ","-3"]
             },
             question9: {
                 question: "Simplify the expression: 3(x + 2) - 2x",
@@ -269,7 +269,7 @@ export const subject = {
             question11: {
                 question: "What is the volume of a cube with a side length of 3 inches?",
                 answer: " 27 cubic inches",
-                wrong_answers: [ "9 cubic inches","18 cubic inches"]
+                wrong_answers: ["9 cubic inches","18 cubic inches"]
             },
             question12: {
                 question: "What is the midpoint of the line segment with endpoints (2, 5) and (8, 11)?",
@@ -289,32 +289,32 @@ export const subject = {
             question15: {
                 question: "Simplify the expression: √36 + √25",
                 answer: "11",
-                wrong_answers: [ "5","6"]
+                wrong_answers: ["5","6"]
             },
             question16: {
                 question: "What is the least common multiple (LCM) of 4 and 6?",
-                answer: " 12",
+                answer: "12",
                 wrong_answers: ["2","6"]
             },
             question17: {
                 question: "What is the square root of 36?",
-                answer: " 6",
-                wrong_answers: [ "8","4"]
+                answer: "6",
+                wrong_answers: ["8","4"]
             },
             question18: {
                 question: "If a shirt costs $20 and there's a 25% discount, how much is the discount?",
-                answer: " $5",
+                answer: "$5",
                 wrong_answers: ["$6","$4"]
             },
             question19: {
                 question: "What is the volume of a cube with a side length of 3 cm?",
                 answer: "27 cubic cm",
-                wrong_answers: [ "9 cubic cm","81 cubic cm"]
+                wrong_answers: ["9 cubic cm","81 cubic cm"]
             },
             question20: {
                 question: "A recipe calls for 2 cups of flour for 6 cookies. How many cups of flour are needed ",
                 answer: "6 cups",
-                wrong_answers: ["4cups","8 cups"]
+                wrong_answers: ["4 cups","8 cups"]
             },
         }
 
