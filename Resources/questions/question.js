@@ -122,35 +122,35 @@ export const subject = {
             question3: {
                 question: "During which battle with the warriors of Lapulapu was Ferdinand Magellan killed?",
                 answer: "Battle of Mactan",
-                wrong_answers: []
+                wrong_answers: ["Battle of Puerto de Cavite", "Battle of Maynila"]
             },
             question4: {
-                question: "",
+                question: "In which year was Martial Law declared in the Philippines?",
                 answer: "",
                 wrong_answers: [2]
             },
             question5: {
-                question: "",
+                question: "How old was Jose Rizal when he was executed?",
                 answer: "",
                 wrong_answers: [2]
             },
             question6: {
-                question: "",
+                question: "In what year did the Philippine Revolution against Spain begin?",
                 answer: "",
                 wrong_answers: [2]
             },
             question7: {
-                question: "",
+                question: "In which year did Magellan discover the Philippines?",
                 answer: "",
                 wrong_answers: [2]
             },
             question8: {
-                question: "",
+                question: "What date was Philippine Independence proclaimed?",
                 answer: "",
                 wrong_answers: [2]
             },
             question9: {
-                question: "",
+                question: "What is the name of the script widely used in Luzon before the adaptation of the Latin Alphabet?",
                 answer: "",
                 wrong_answers: [2]
             },
