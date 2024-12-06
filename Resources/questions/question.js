@@ -261,7 +261,61 @@ export const subject = {
                 answer: "x + 6",
                 wrong_answers: ["x - 6","5x - 6"]
             },
-
+            question10: {
+                question: "What is the value of pi (π) rounded to two decimal places?",
+                answer: "3.14",
+                wrong_answers: ["3.15","3.20"]
+            },
+            question11: {
+                question: "What is the volume of a cube with a side length of 3 inches?",
+                answer: " 27 cubic inches",
+                wrong_answers: [ "9 cubic inches","18 cubic inches"]
+            },
+            question12: {
+                question: "What is the midpoint of the line segment with endpoints (2, 5) and (8, 11)?",
+                answer: " (5, 8)",
+                wrong_answers: ["(10, 16)","(3, 3)"]
+            },
+            question13: {
+                question: "Solve the equation: 1/2x = 4",
+                answer: "8",
+                wrong_answers: ["2","1/8"]
+            },
+            question14: {
+                question: "What is the greatest common factor (GCF) of 12 and 18?",
+                answer: "6",
+                wrong_answers: ["2","1"]
+            },
+            question15: {
+                question: "Simplify the expression: √36 + √25",
+                answer: "11",
+                wrong_answers: [ "5","6"]
+            },
+            question16: {
+                question: "What is the least common multiple (LCM) of 4 and 6?",
+                answer: " 12",
+                wrong_answers: ["2","6"]
+            },
+            question17: {
+                question: "What is the square root of 36?",
+                answer: " 6",
+                wrong_answers: [ "8","4"]
+            },
+            question18: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question1: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question1: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
         }
 
     },
