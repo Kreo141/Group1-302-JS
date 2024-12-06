@@ -114,6 +114,51 @@ export const subject = {
                 answer: "",
                 wrong_answers: [2]
             },
+            question2: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question3: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question4: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question5: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question6: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question7: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question8: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question8: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question10: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
         }
 
     },
