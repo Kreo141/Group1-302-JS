@@ -160,9 +160,9 @@ export const subject = {
                 wrong_answers: [2]
             },
             question11: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
+                question: "The First Republic of the Philippines was established during a war. Which one?",
+                answer: "Philippine-American War",
+                wrong_answers: ["Spanish-American War", "World War 1"]
             },
             question12: {
                 question: "",
