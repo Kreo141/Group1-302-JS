@@ -126,37 +126,37 @@ export const subject = {
             },
             question4: {
                 question: "In which year was Martial Law declared in the Philippines?",
-                answer: "",
+                answer: "1972",
                 wrong_answers: [2]
             },
             question5: {
                 question: "How old was Jose Rizal when he was executed?",
-                answer: "",
+                answer: "36",
                 wrong_answers: [2]
             },
             question6: {
                 question: "In what year did the Philippine Revolution against Spain begin?",
-                answer: "",
+                answer: "1896",
                 wrong_answers: [2]
             },
             question7: {
                 question: "In which year did Magellan discover the Philippines?",
-                answer: "",
+                answer: "1521",
                 wrong_answers: [2]
             },
             question8: {
                 question: "What date was Philippine Independence proclaimed?",
-                answer: "",
+                answer: "June 12, 1898",
                 wrong_answers: [2]
             },
             question9: {
                 question: "What is the name of the script widely used in Luzon before the adaptation of the Latin Alphabet?",
-                answer: "",
+                answer: "Baybayin",
                 wrong_answers: [2]
             },
             question10: {
                 question: "In which year were the Gomburza priests executed?",
-                answer: "",
+                answer: "1872",
                 wrong_answers: [2]
             },
             question11: {
