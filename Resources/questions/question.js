@@ -165,32 +165,32 @@ export const subject = {
                 wrong_answers: ["Spanish-American War", "World War 1"]
             },
             question12: {
-                question: "",
-                answer: "",
+                question: "The Philippines was a colony for almost 400 years of which European country?",
+                answer: "Spain",
                 wrong_answers: [2]
             },
             question13: {
-                question: "",
-                answer: "",
+                question: "Who is the Filipino World Champion boxer who won a record of 12 titles in 8 different weight divisions?",
+                answer: "Manny Pacquiao",
                 wrong_answers: [2]
             },
             question14: {
-                question: "",
-                answer: "",
+                question: "What is the name of the world-famous resort island located in the Visayan province of Aklan known for its white-sand beaches and vibrant nightlife?",
+                answer: "Boracay",
                 wrong_answers: [2]
             },
             question15: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
+                question: "What is the currency used in the Philippines? ",
+                answer: "Peso",
+                wrong_answers: ["Petot", "Pisus"]
             },
             question16: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
+                question: "How many islands are there in the Philippine Archipelago?",
+                answer: "7641",
+                wrong_answers: ["7107", "7406"]
             },
             question17: {
-                question: "",
+                question: "On which date was the National Hero, Jose Rizal, executed?",
                 answer: "",
                 wrong_answers: [2]
             },
