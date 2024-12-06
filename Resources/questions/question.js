@@ -200,14 +200,14 @@ export const subject = {
                 wrong_answers: ["300 years", "664 years"]
             },
             question19: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
+                question: "What was the name of the secret society that sparked the Philippine Revolution?",
+                answer: "The Katipunan",
+                wrong_answers: ["La Liga Filipina", "Gomburza Society"]
             },
             question20: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
+                question: "Who led the longest revolt in Philippine history, lasting from 1744 to 1829?",
+                answer: "Francisco Dagohoy",
+                wrong_answers: ["Lapu-Lapu", "Diego Silang"]
             },
         }
     },
