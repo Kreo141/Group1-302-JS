@@ -303,18 +303,18 @@ export const subject = {
             },
             question18: {
                 question: "If a shirt costs $20 and there's a 25% discount, how much is the discount?",
-                answer: "",
-                wrong_answers: [2]
+                answer: " $5",
+                wrong_answers: ["$6","$4"]
             },
-            question1: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
+            question19: {
+                question: "What is the volume of a cube with a side length of 3 cm?",
+                answer: "27 cubic cm",
+                wrong_answers: [ "9 cubic cm","81 cubic cm"]
             },
-            question1: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
+            question20: {
+                question: "A recipe calls for 2 cups of flour for 6 cookies. How many cups of flour are needed ",
+                answer: "6 cups",
+                wrong_answers: ["4cups","8 cups"]
             },
         }
 
