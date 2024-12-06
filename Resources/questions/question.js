@@ -110,13 +110,45 @@ export const subject = {
 
         questions: {
             question1: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
+                question: "What is the result of 7 multiplied by 8?",
+                answer: "56",
+                wrong_answers: ["48", "54"]
             },
-        }
+            question2: {
+                question: "Solve for x: 2x + 5 = 15",
+                answer: "5",
+                wrong_answers: [ "7","10"]
+                
+
+
+            },
+            question3: {
+                question: "What is the square root of 64?",
+                answer: "8",
+                wrong_answers: ["16","32"]
+            },
+            question4: {
+                question: "Simplify the fraction: 12/18",
+                answer: " 2/3",
+                wrong_answers: [ "2/3","4/5"]
+            },
+            question1: {
+                question: "What is the area of a rectangle with a length of 6 units and a width of 4 units?",
+                answer: "24 square units",
+                wrong_answers: ["36 square units","10 square units"]
+            },
+            question1: {
+                question: "What is the perimeter of a square with a side length of 5 cm?",
+                answer: "20 cm",
+                wrong_answers: ["25 cm","10 cm"]
+            },
+        
+
+    }
+
 
     },
+
 
     Math:  {
 
