@@ -213,7 +213,7 @@ export const subject = {
     },
 
 
-    History:  {
+    Math:  {
 
         questions: {
             question1: {
