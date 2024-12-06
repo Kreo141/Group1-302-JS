@@ -302,7 +302,7 @@ export const subject = {
                 wrong_answers: [ "8","4"]
             },
             question18: {
-                question: "",
+                question: "If a shirt costs $20 and there's a 25% discount, how much is the discount?",
                 answer: "",
                 wrong_answers: [2]
             },
