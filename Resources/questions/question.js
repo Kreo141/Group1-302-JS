@@ -102,120 +102,34 @@ export const subject = {
                 answer: "Gravity",
                 wrong_answers: ["Magnetism", "Inertia"]
             },
-        }
+        },
 
     },
 
     History:  {
 
         questions: {
-        
+            question1: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
         }
-        
 
     },
+
     Math: {
-            question2:{
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question3: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question4: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question5: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question6: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question7: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question8: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question9: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question10: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question11: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question12: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question13: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question14: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question15: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question16: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question17: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question18: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question19: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
-            },
-            question20: {
+        questions: {
+            question1: {
                 question: "",
                 answer: "",
                 wrong_answers: [2]
             },
         }
-
     },
 
 
-    Math:  {
+    History:  {
 
         questions: {
             question1: {
@@ -262,5 +176,5 @@ export const subject = {
         }
 
     },
-    },
+
 }
