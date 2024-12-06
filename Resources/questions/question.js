@@ -155,7 +155,7 @@ export const subject = {
                 wrong_answers: [2]
             },
             question10: {
-                question: "",
+                question: "In which year were the Gomburza priests executed?",
                 answer: "",
                 wrong_answers: [2]
             },
