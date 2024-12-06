@@ -127,37 +127,37 @@ export const subject = {
             question4: {
                 question: "In which year was Martial Law declared in the Philippines?",
                 answer: "1972",
-                wrong_answers: [2]
+                wrong_answers: ["1965", "1986"]
             },
             question5: {
                 question: "How old was Jose Rizal when he was executed?",
                 answer: "36",
-                wrong_answers: [2]
+                wrong_answers: ["28", "32"]
             },
             question6: {
                 question: "In what year did the Philippine Revolution against Spain begin?",
                 answer: "1896",
-                wrong_answers: [2]
+                wrong_answers: ["1861", "1890"]
             },
             question7: {
                 question: "In which year did Magellan discover the Philippines?",
                 answer: "1521",
-                wrong_answers: [2]
+                wrong_answers: ["1571", "1600"]
             },
             question8: {
                 question: "What date was Philippine Independence proclaimed?",
                 answer: "June 12, 1898",
-                wrong_answers: [2]
+                wrong_answers: ["June 26, 1898", "June 12, 1889"]
             },
             question9: {
                 question: "What is the name of the script widely used in Luzon before the adaptation of the Latin Alphabet?",
                 answer: "Baybayin",
-                wrong_answers: [2]
+                wrong_answers: ["Tangut", "Nandinagari"]
             },
             question10: {
                 question: "In which year were the Gomburza priests executed?",
                 answer: "1872",
-                wrong_answers: [2]
+                wrong_answers: ["1889", "1867"]
             },
             question11: {
                 question: "The First Republic of the Philippines was established during a war. Which one?",
@@ -167,17 +167,17 @@ export const subject = {
             question12: {
                 question: "The Philippines was a colony for almost 400 years of which European country?",
                 answer: "Spain",
-                wrong_answers: [2]
+                wrong_answers: ["France", "United Kingdom"]
             },
             question13: {
                 question: "Who is the Filipino World Champion boxer who won a record of 12 titles in 8 different weight divisions?",
                 answer: "Manny Pacquiao",
-                wrong_answers: [2]
+                wrong_answers: ["Nonito Donaire", "John Riel Casimero"]
             },
             question14: {
                 question: "What is the name of the world-famous resort island located in the Visayan province of Aklan known for its white-sand beaches and vibrant nightlife?",
                 answer: "Boracay",
-                wrong_answers: [2]
+                wrong_answers: ["Palawan", "Samal Island"]
             },
             question15: {
                 question: "What is the currency used in the Philippines? ",
@@ -191,13 +191,13 @@ export const subject = {
             },
             question17: {
                 question: "On which date was the National Hero, Jose Rizal, executed?",
-                answer: "",
-                wrong_answers: [2]
+                answer: "December 30",
+                wrong_answers: ["June 19", "November 30"]
             },
             question18: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
+                question: "For how many years did Spanish rule last in the Philippines?",
+                answer: "333 years",
+                wrong_answers: ["300 years", "664 years"]
             },
             question19: {
                 question: "",
