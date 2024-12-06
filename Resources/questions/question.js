@@ -110,17 +110,101 @@ export const subject = {
 
         questions: {
             question1: {
+                question: "What is the oldest city in the Philippines?",
+                answer: "Cebu",
+                wrong_answers: ["Surigao", "Bacolod"]
+            },
+            question2: {
+                question: "Who was the first president of the Philippines?",
+                answer: "Emilio Aguinaldo",
+                wrong_answers: ["Rodrigo Roa Duterte", "Manuel L. Quezon"]
+            },
+            question3: {
+                question: "During which battle with the warriors of Lapulapu was Ferdinand Magellan killed?",
+                answer: "Battle of Mactan",
+                wrong_answers: []
+            },
+            question4: {
                 question: "",
                 answer: "",
                 wrong_answers: [2]
             },
-        }
-
-    },
-
-    Math: {
-        questions: {
-            question1: {
+            question5: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question6: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question7: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question8: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question9: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question10: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question11: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question12: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question13: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question14: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question15: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question16: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question17: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question18: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question19: {
+                question: "",
+                answer: "",
+                wrong_answers: [2]
+            },
+            question20: {
                 question: "",
                 answer: "",
                 wrong_answers: [2]
