@@ -11,11 +11,17 @@ $(document).ready(function () {
 
 function open(elementId){
 
+    $("#closeLev2").css({
+        "display": "block",
+        "opacity": "100%"
+    })
+
     $("#blur").css({
         "display": "block",
         "-webkit-backdrop-filter": "blur(10px)",
         "backdrop-filter": "blur(10px)"
     });
+    
 
     var subjectContext = {
         container1: {
@@ -56,6 +62,12 @@ function open(elementId){
 }
 
 function close(){
+    $("#closeLev2").css({
+        "display": "none",
+        "opacity": "0"
+    })
+
+
     $("#blur").css({
         "-webkit-backdrop-filter": "blur(0px)",
         "backdrop-filter": "blur(0px)",
