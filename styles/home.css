@@ -229,10 +229,13 @@ img{
     font-size: 1.5em;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.3s ease;
-    transition: background-color 0.3s ease;
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     border-radius: 3px;
+    display: none;
+    opacity: 0%;
 }
+
+
 
 #closeLev2:hover {
     background-color: red;
