@@ -48,6 +48,7 @@ function renderQuestions(selectedQuestions) {
             label.style.display = 'block';
 
             const radio = document.createElement('input');
+            radio.className = "radio"
             radio.type = 'radio';
             radio.name = `question-${index}`;
             radio.value = answer;
@@ -100,7 +101,4 @@ document.addEventListener('submit', (event) => {
     console.log('Quiz Results:', results);
     alert('Quiz submitted! Check the console for results.');
 });
-
-
-    
 })
