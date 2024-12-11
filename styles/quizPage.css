@@ -54,6 +54,27 @@ input{
 }
 
 
+
+input[type="radio"] {
+  width: 15px;
+  height: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*BUTTON IPIKS*/
 button {
     position: relative;
