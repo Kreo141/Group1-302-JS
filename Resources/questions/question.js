@@ -321,17 +321,131 @@ export const subject = {
     },
 
     English:  {
-
+ 
         questions: {
             question1: {
-                question: "",
-                answer: "",
-                wrong_answers: [2]
+                question: "What term describes a word that has the opposite meaning of another word?",
+                answer: "Antonym",
+                wrong_answers: ["Synonym", "Homonym"]
+            },
+ 
+            question2: {
+                question: "What is the grammatical term for a word that modifies a noun?",
+                answer: "Adjective",
+                wrong_answers: ["Verb", "Adverb"]
+            },
+ 
+            question3: {
+                question: "What do you call a figure of speech that combines contradictory terms?",
+                answer: "Oxymoron",
+                wrong_answers: ["Metaphor", "Simile"]
+            },
+ 
+            question4: {
+                question: "What literary device involves the repetition of initial consonant sounds in nearby words?",
+                answer: "Alliteration",
+                wrong_answers: ["Assonance", "Onomatopoeia"]
+            },
+ 
+            question5: {
+                question: "Which phrase is an example of homophones?",
+                answer: "Two / Too / To",
+                wrong_answers: ["Affect / Effect", "Principal / Principle"]
+            },
+
+            question6: {
+                question: "What do you call a group of words that expresses a complete thought?",
+                answer: " Independent clause",
+                wrong_answers: ["Phrase", "Dependent clause"]
+            },
+ 
+            question7: {
+                question: "Which term refers to the attitude a writer conveys toward their subject?",
+                answer: "Tone",
+                wrong_answers: [" Theme", "Mood"]
+            },
+ 
+            question8: {
+                question: "Which phrase illustrates an idiom?",
+                answer: "Break a leg!",
+                wrong_answers: ["It's raining cats and dogs.", "She has a heart of gold."]
+            },
+ 
+            question9: {
+                question: "What is the term for a literary work that tells a story through the use of dialogue and action?",
+                answer: "Drama",
+                wrong_answers: ["Essay", "Poem"]
+            },
+ 
+            question10: {
+                question: "What do you call a statement that contradicts itself but may still be true?",
+                answer: "Paradox",
+                wrong_answers: ["Oxymoron", "Euphemism"]
+            },
+
+            question11: {
+                question: "What is the term for the repetition of consonant sounds within or at the end of words?",
+                answer: "Consonance",
+                wrong_answers: ["Assonance", "Alliteration"]
+            },
+ 
+            question12: {
+                question: "What is the term for the main character in a literary work?",
+                answer: "Protagonist",
+                wrong_answers: ["Antagonist", "Foil"]
+            },
+ 
+            question13: {
+                question: "Which term refers to the central idea or message in a literary work?",
+                answer: "Main idea",
+                wrong_answers: ["Theme", "Plot"]
+            },
+ 
+            question14: {
+                question: "What term describes a narrative technique in which the story is told from the perspective of one character?",
+                answer: "First-person point of view",
+                wrong_answers: ["Third-person omniscient", "Second-person point of view"]
+            },
+ 
+            question15: {
+                question: "What do you call a brief and witty saying that expresses a general truth?",
+                answer: "Aphorism",
+                wrong_answers: ["Proverb", "Adage"]
+            },
+
+            
+question16: {
+                question: "What is the term for a character who contrasts with another character, often the protagonist?",
+                answer: "Foil",
+                wrong_answers: ["Hero", "Antagonist"]
+            },
+ 
+            question17: {
+                question: "Which term refers to the repetition of sounds at the end of words, often used in poetry?",
+                answer: "Rhyme",
+                wrong_answers: ["Assonance", "Alliteration"]
+            },
+ 
+            question18: {
+                question: "What is the term for a literary device that involves a play on words?",
+                answer: "Pun",
+                wrong_answers: ["Metaphor", "Simile"]
+            },
+ 
+            question19: {
+                question: "What do you call a recurring theme or element in literature that has symbolic significance?",
+                answer: "Symbol",
+                wrong_answers: ["Motif", "Theme"]
+            },
+ 
+            question20: {
+                question: "Which term refers to the use of hints or clues to suggest what will happen later in a story?",
+                answer: "Foreshadowing",
+                wrong_answers: ["Flashback", "Irony"]
             },
         }
-
+ 
     },
-
     IT:  {
 
         questions: {
