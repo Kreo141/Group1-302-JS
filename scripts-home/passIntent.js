@@ -35,6 +35,7 @@ $(document).ready(function() {
         var difficulty = $("#difficulty").val()
         var questionCount = $("#questionCount").val()
 
-        window.location.href = `../pages/quizPage.html?data1=${encodeURIComponent(subject)}&data2=${encodeURIComponent(questionCount)}&data3=${encodeURIComponent(difficulty)}`;
+        window.location.href = `/Group1-302-JS/pages/quizPage.html?data1=${encodeURIComponent(subject)}&data2=${encodeURIComponent(questionCount)}&data3=${encodeURIComponent(difficulty)}`
+
     });
 });
