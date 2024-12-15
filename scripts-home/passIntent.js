@@ -35,7 +35,11 @@ $(document).ready(function() {
         var difficulty = $("#difficulty").val()
         var questionCount = $("#questionCount").val()
 
-        window.location.href = `/Group1-302-JS/pages/quizPage.html?data1=${encodeURIComponent(subject)}&data2=${encodeURIComponent(questionCount)}&data3=${encodeURIComponent(difficulty)}`
+        let baseUrl = window.location.hostname.includes('github.io') ? 'Group1-302-JS/' : '';
+
+        window.location.href = `${baseUrl}pages/quizPage.html?data1=${encodeURIComponent(subject)}&data2=${encodeURIComponent(questionCount)}&data3=${encodeURIComponent(difficulty)}`;
+        
+        window.location.href = `../pages/quizPage.html?data1=${encodeURIComponent(subject)}&data2=${encodeURIComponent(questionCount)}&data3=${encodeURIComponent(difficulty)}`
 
     });
 });
