@@ -33,7 +33,7 @@ Create a simple, interactive quiz app.
 - Add a timer for each question and deduct points for wrong answers.
 
 
-
+skibidi
 ```bash
 │   home.html
 │   index.html
