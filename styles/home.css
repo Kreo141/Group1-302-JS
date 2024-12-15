@@ -236,8 +236,7 @@ img{
 }
 
 
-
-#closeLev2:hover {
+#closeLev2:hover, #jumpscir:hover {
     background-color: red;
     color: white;
 }

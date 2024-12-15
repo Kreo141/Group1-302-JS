@@ -100,9 +100,8 @@ function renderQuestions(selectedQuestions) {
             })
         })
 
-        loadResults(results)
+        finish(results)
 
-        console.log('Quiz Results:', results)
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -110,12 +109,17 @@ function renderQuestions(selectedQuestions) {
     });
 })
 
+function finish(results){
+    loadResults(results)
+    loadChart(results)
+    loadScore(results)
+    loadReturnButton()
+    storeResults()
+}
+
+//Crazy Happenings below 
 function loadResults(results){
     const questionElements = document.querySelectorAll('.question')
-
-    console.log(results[0].question)
-
-    console.log(results.length)
 
     questionElements.forEach(element => {
         element.remove()
@@ -153,26 +157,6 @@ function loadResults(results){
         answer.innerHTML = "Your Answer: " + ((userAnswer != null) ? userAnswer : "No Answer")
         correct.innerHTML = "Correct Answer: " + correctAnswr
     }
-
-    loadChart(results)
-
-    var form = $("#quiz-form") 
-
-    const submitButtonContainer = document.createElement('div')
-    const submitButton = document.createElement('button')
-    submitButtonContainer.id = "submitButtonContainer"
-    submitButton.type = 'button'
-    submitButton.style = '--clr:#39FF14';
-    submitButton.innerHTML = '<span>Return</span><i></i>'
-    submitButtonContainer.appendChild(submitButton)
-    
-    submitButton.addEventListener('click', () => {
-        window.location.href = '../home.html'
-    });
-    
-    form.append(submitButtonContainer);
-    
-    
 }
 
 function loadChart(results) {
@@ -214,3 +198,46 @@ function loadChart(results) {
         }
     });
 }
+
+function loadScore(results){
+    const correctCount = results.filter(result => result.correct).length
+    const incorrectCount = results.length - correctCount
+
+    var scoreElement = document.createElement('p')
+    scoreElement.id = "score"
+    scoreElement.innerHTML = "Score: " + correctCount + "/" + results.length
+
+    document.getElementById('quiz-form').appendChild(scoreElement)
+}
+
+function loadReturnButton(){
+    var form = $("#quiz-form") 
+
+    const submitButtonContainer = document.createElement('div')
+    const submitButton = document.createElement('button')
+    submitButtonContainer.id = "submitButtonContainer"
+    submitButton.type = 'button'
+    submitButton.style = '--clr:#39FF14';
+    submitButton.innerHTML = '<span>Return</span><i></i>'
+    submitButtonContainer.appendChild(submitButton)
+    
+    submitButton.addEventListener('click', () => {
+        window.location.href = '../home.html'
+    });
+    
+    form.append(submitButtonContainer);
+}
+
+function storeResults(){
+    const correctCount = results.filter(result => result.correct).length;
+
+    let cookieIndex = 1;
+
+    while (document.cookie.includes(`correctCount${cookieIndex}=`)) {
+        cookieIndex++;
+    }
+
+    document.cookie = `correctCount${cookieIndex}=${correctCount}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+
+}
+
