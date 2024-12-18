@@ -1,3 +1,5 @@
+##I've been pushing the contributions of other members to GitHub on their behalf, as they currently don't have access to the platform. This ensures that their work is included in the project and properly updated in the repository.
+
 # Quiz App
 
 ## **Goal:**  
