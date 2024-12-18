@@ -1,265 +1,243 @@
-// Importing necessary data
-import { subject } from '../Resources/questions/question.js';
+import {subject} from '../Resources/questions/question.js'
 
 $(document).ready(function () {
-    // Retrieve URL parameters
-    const params = new URLSearchParams(window.location.search);
-    const selectedSubject = params.get('data1');
-    const questionCount = parseInt(params.get('data2'), 10);
+const params = new URLSearchParams(window.location.search);
+const selectedSubject = params.get('data1'); 
+const questionCount = parseInt(params.get('data2'))
 
-    // Clone subject data to prevent mutation
-    const subjects = JSON.parse(JSON.stringify(subject));
+const subjects = JSON.parse(JSON.stringify(subject))
 
-    /**
-     * Generate a list of random questions
-     * @param {Object} subjectData - Selected subject data
-     * @param {number} questionCount - Number of questions to generate
-     * @returns {Array} Array of random questions
-     */
-    function generateRandomQuestions(subjectData, questionCount) {
-        const questions = Object.values(subjectData.questions);
+function generateRandomQuestions(subject, questionCount) {
+    const subjectQuestions = Object.values(subject.questions)
+    
+    for (let i = subjectQuestions.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [subjectQuestions[i], subjectQuestions[randomIndex]] = [subjectQuestions[randomIndex], subjectQuestions[i]]
+    }
 
-        // Shuffle questions using Fisher-Yates algorithm
-        for (let i = questions.length - 1; i > 0; i--) {
+    return subjectQuestions.slice(0, questionCount)
+}
+
+function renderQuestions(selectedQuestions) {
+    const form = document.createElement('form')
+    form.id = 'quiz-form';
+
+    selectedQuestions.forEach((questionObj, index) => {
+        const questionContainer = document.createElement('div')
+        questionContainer.className = 'question'
+
+        const questionHolder = document.createElement('div')
+        questionHolder.className = 'questionHolder'
+
+        const questionText = document.createElement('p')
+        questionText.className = 'theQuestion'
+        questionText.innerText = `${index + 1}. ${questionObj.question}`
+        questionHolder.appendChild(questionText)
+
+        questionContainer.appendChild(questionHolder)
+
+        const answers = [questionObj.answer, ...questionObj.wrong_answers]
+        for (let i = answers.length - 1; i > 0; i--) {
             const randomIndex = Math.floor(Math.random() * (i + 1));
-            [questions[i], questions[randomIndex]] = [questions[randomIndex], questions[i]];
+            [answers[i], answers[randomIndex]] = [answers[randomIndex], answers[i]]
         }
 
-        return questions.slice(0, questionCount);
-    }
+        answers.forEach((answer) => {
+            const label = document.createElement('label')
+            label.innerText = answer
+            label.style.display = 'block'
 
-    /**
-     * Render questions dynamically in the form
-     * @param {Array} selectedQuestions - List of selected questions
-     */
-    function renderQuestions(selectedQuestions) {
-        const form = document.createElement('form');
-        form.id = 'quiz-form';
+            const radio = document.createElement('input')
+            radio.className = "radio"
+            radio.type = 'radio'
+            radio.name = `question-${index}`
+            radio.value = answer
 
-        selectedQuestions.forEach((questionObj, index) => {
-            // Create question container
-            const questionContainer = document.createElement('div');
-            questionContainer.className = 'question';
-
-            // Add question text
-            const questionHolder = document.createElement('div');
-            questionHolder.className = 'questionHolder';
-
-            const questionText = document.createElement('p');
-            questionText.className = 'theQuestion';
-            questionText.innerText = `${index + 1}. ${questionObj.question}`;
-            questionHolder.appendChild(questionText);
-
-            questionContainer.appendChild(questionHolder);
-
-            // Shuffle answers
-            const answers = [questionObj.answer, ...questionObj.wrong_answers];
-            for (let i = answers.length - 1; i > 0; i--) {
-                const randomIndex = Math.floor(Math.random() * (i + 1));
-                [answers[i], answers[randomIndex]] = [answers[randomIndex], answers[i]];
-            }
-
-            // Add answer options
-            answers.forEach((answer) => {
-                const label = document.createElement('label');
-                label.innerText = answer;
-                label.style.display = 'block';
-
-                const radio = document.createElement('input');
-                radio.className = 'radio';
-                radio.type = 'radio';
-                radio.name = `question-${index}`;
-                radio.value = answer;
-
-                label.prepend(radio);
-                questionContainer.appendChild(label);
-            });
-
-            form.appendChild(questionContainer);
+            label.prepend(radio)
+            questionContainer.appendChild(label)
         });
 
-        // Add submit button
-        const submitButtonContainer = document.createElement('div');
-        submitButtonContainer.id = 'submitButtonContainer';
-
-        const submitButton = document.createElement('button');
-        submitButton.type = 'submit';
-        submitButton.style = '--clr:#39FF14';
-        submitButton.innerHTML = '<span>Submit</span><i></i>';
-
-        submitButtonContainer.appendChild(submitButton);
-        form.appendChild(submitButtonContainer);
-
-        document.body.appendChild(form);
-    }
-
-    // Initialize and render quiz
-    let selectedQuestions = [];
-    if (subjects[selectedSubject]) {
-        selectedQuestions = generateRandomQuestions(subjects[selectedSubject], questionCount);
-        renderQuestions(selectedQuestions);
-    } else {
-        alert('Invalid subject selected!');
-    }
-
-    // Handle form submission
-    document.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        const formData = new FormData(document.getElementById('quiz-form'));
-        const results = selectedQuestions.map((questionObj, index) => {
-            const userAnswer = formData.get(`question-${index}`);
-            return {
-                question: questionObj.question,
-                userAnswer,
-                correctAnswer: questionObj.answer,
-                correct: userAnswer === questionObj.answer,
-            };
-        });
-
-        finishQuiz(results);
-
-        // Scroll to the top of the page
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
+        form.appendChild(questionContainer)
     });
 
-    /**
-     * Handle post-quiz logic
-     * @param {Array} results - Quiz results
-     */
-    function finishQuiz(results) {
-        loadResults(results);
-        loadChart(results);
-        loadScore(results);
-        loadReturnButton();
-        storeResults(results);
+    const submitButtonContainer = document.createElement('div')
+    const submitButton = document.createElement('button')
+    submitButtonContainer.id = "submitButtonContainer"
+    submitButton.type = 'submit'
+    submitButton.style = '--clr:#39FF14'
+    submitButton.innerHTML = '<span>Submit</span><i></i>'
+    submitButtonContainer.appendChild(submitButton)
+
+    form.appendChild(submitButtonContainer);
+
+    document.body.appendChild(form)
     }
 
-    /**
-     * Render quiz results
-     * @param {Array} results - Quiz results
-     */
-    function loadResults(results) {
-        const questionElements = document.querySelectorAll('.question');
-        questionElements.forEach((element) => element.remove());
-        $('#submitButtonContainer').remove();
+    let selectedQuestions = []
 
-        results.forEach((result) => {
-            const resultContainer = document.createElement('div');
-            resultContainer.id = result.correct ? 'correct' : 'wrong';
+    if (subjects[selectedSubject]) {
+        selectedQuestions = generateRandomQuestions(subjects[selectedSubject], questionCount)
+        renderQuestions(selectedQuestions)
+    } else {
+        alert('Invalid subject selected!')
+    }
 
-            const questionHolder = document.createElement('div');
-            questionHolder.className = 'questionHolder';
 
-            const questionText = document.createElement('p');
-            questionText.className = 'theQuestion';
-            questionText.innerText = result.question;
+    document.addEventListener('submit', (event) => {
+        event.preventDefault()
 
-            const userAnswerText = document.createElement('p');
-            userAnswerText.id = 'userAnswer';
-            userAnswerText.innerText = `Your Answer: ${result.userAnswer || 'No Answer'}`;
+        const formData = new FormData(document.getElementById('quiz-form'))
+        const results = []
 
-            const correctAnswerText = document.createElement('p');
-            correctAnswerText.id = 'correctAnswer';
-            correctAnswerText.innerText = `Correct Answer: ${result.correctAnswer}`;
+        selectedQuestions.forEach((questionObj, index) => {
+            const userAnswer = formData.get(`question-${index}`)
+            const correctAnswer = questionObj.answer;
+            results.push({
+                question: questionObj.question,
+                userAnswer,
+                correctAnswer,
+                correct: userAnswer === correctAnswer
+            })
+        })
 
-            questionHolder.appendChild(questionText);
-            resultContainer.appendChild(questionHolder);
-            resultContainer.appendChild(userAnswerText);
-            resultContainer.appendChild(correctAnswerText);
+        finish(results)
 
-            $('#quiz-form').append(resultContainer);
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
+    });
+})
+
+function finish(results){
+    loadResults(results)
+    loadChart(results)
+    loadScore(results)
+    loadReturnButton()
+    storeResults()
+}
+
+//Crazy Happenings below 
+function loadResults(results){
+    const questionElements = document.querySelectorAll('.question')
+
+    questionElements.forEach(element => {
+        element.remove()
+    });
+    
+    $("#submitButtonContainer").remove()
+
+    for(var x = 0; x < results.length; x++){
+
+        const div = document.createElement('div');
+        var questionHolder = document.createElement('div')
+        var theQuestion = document.createElement('p')
+        var answer = document.createElement('p')
+        var correct = document.createElement('p')  
+
+        const question = results[x].question
+        const userAnswer = results[x].userAnswer
+        const correctAnswr = results[x].correctAnswer
+        const isCorrect = results[x].correct
+
+        div.id = (isCorrect) ? 'correct' : "wrong"
+        questionHolder.className = "questionHolder"
+        theQuestion.className = "theQuestion"
+        answer.id = "userAnswer"
+        correct.id = "correctAnswer"
+
+
+        $("#quiz-form").append(div)
+        div.append(questionHolder)
+        questionHolder.append(theQuestion)
+        div.append(answer)
+        div.append(correct)
+
+        theQuestion.innerHTML = question
+        answer.innerHTML = "Your Answer: " + ((userAnswer != null) ? userAnswer : "No Answer")
+        correct.innerHTML = "Correct Answer: " + correctAnswr
     }
+}
 
-    /**
-     * Render pie chart of results
-     * @param {Array} results - Quiz results
-     */
-    function loadChart(results) {
-        const correctCount = results.filter((result) => result.correct).length;
-        const incorrectCount = results.length - correctCount;
+function loadChart(results) {
+    const correctCount = results.filter(result => result.correct).length
+    const incorrectCount = results.length - correctCount
 
-        const data = {
-            datasets: [
-                {
-                    data: [correctCount, incorrectCount],
-                    backgroundColor: ['#39FF14', 'red'],
-                    hoverOffset: 4,
+    const data = {
+        datasets: [{
+            data: [correctCount, incorrectCount],
+            backgroundColor: ['#39FF14', 'red'],
+            hoverOffset: 4
+        }]
+    };
+
+    const chartContainer = document.createElement('div')
+    chartContainer.id = 'chartContainer';
+    document.getElementById('quiz-form').appendChild(chartContainer)
+
+    const canvas = document.createElement('canvas');
+    chartContainer.appendChild(canvas);
+
+    new Chart(canvas, {
+        type: 'pie',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
                 },
-            ],
-        };
-
-        const chartContainer = document.createElement('div');
-        chartContainer.id = 'chartContainer';
-        document.getElementById('quiz-form').appendChild(chartContainer);
-
-        const canvas = document.createElement('canvas');
-        chartContainer.appendChild(canvas);
-
-        new Chart(canvas, {
-            type: 'pie',
-            data,
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                },
-            },
-        });
-    }
-
-    /**
-     * Display quiz score
-     * @param {Array} results - Quiz results
-     */
-    function loadScore(results) {
-        const correctCount = results.filter((result) => result.correct).length;
-
-        const scoreElement = document.createElement('p');
-        scoreElement.id = 'score';
-        scoreElement.innerText = `Score: ${correctCount}/${results.length}`;
-
-        document.getElementById('quiz-form').appendChild(scoreElement);
-    }
-
-    /**
-     * Add a return button to the form
-     */
-    function loadReturnButton() {
-        const returnButtonContainer = document.createElement('div');
-        returnButtonContainer.id = 'submitButtonContainer';
-
-        const returnButton = document.createElement('button');
-        returnButton.type = 'button';
-        returnButton.style = '--clr:#39FF14';
-        returnButton.innerHTML = '<span>Return</span><i></i>';
-
-        returnButton.addEventListener('click', () => {
-            window.location.href = '../home.html';
-        });
-
-        returnButtonContainer.appendChild(returnButton);
-        $('#quiz-form').append(returnButtonContainer);
-    }
-
-    /**
-     * Store results in cookies
-     * @param {Array} results - Quiz results
-     */
-    function storeResults(results) {
-        const correctCount = results.filter((result) => result.correct).length;
-        let cookieIndex = 1;
-
-        while (document.cookie.includes(`correctCount${cookieIndex}=`)) {
-            cookieIndex++;
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.label + ': ' + tooltipItem.raw
+                        }
+                    }
+                }
+            }
         }
+    });
+}
 
-        document.cookie = `correctCount${cookieIndex}=${correctCount}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+function loadScore(results){
+    const correctCount = results.filter(result => result.correct).length
+    const incorrectCount = results.length - correctCount
+
+    var scoreElement = document.createElement('p')
+    scoreElement.id = "score"
+    scoreElement.innerHTML = "Score: " + correctCount + "/" + results.length
+
+    document.getElementById('quiz-form').appendChild(scoreElement)
+}
+
+function loadReturnButton(){
+    var form = $("#quiz-form") 
+
+    const submitButtonContainer = document.createElement('div')
+    const submitButton = document.createElement('button')
+    submitButtonContainer.id = "submitButtonContainer"
+    submitButton.type = 'button'
+    submitButton.style = '--clr:#39FF14';
+    submitButton.innerHTML = '<span>Return</span><i></i>'
+    submitButtonContainer.appendChild(submitButton)
+    
+    submitButton.addEventListener('click', () => {
+        window.location.href = '../home.html'
+    });
+    
+    form.append(submitButtonContainer);
+}
+
+function storeResults(){
+    const correctCount = results.filter(result => result.correct).length;
+
+    let cookieIndex = 1;
+
+    while (document.cookie.includes(`correctCount${cookieIndex}=`)) {
+        cookieIndex++;
     }
-});
+
+    document.cookie = `correctCount${cookieIndex}=${correctCount}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+
+}
+
